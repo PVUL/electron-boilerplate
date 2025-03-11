@@ -6,15 +6,17 @@
   "description": "Minimal and modern Electron boilerplate with Vite, React, and TypeScript",
   "main": ".vite/build/main.js",
   "scripts": {
-    "start": "electron-forge start",
+    "start": "npm run rebuild && npm exec electron-forge start",
     "package": "npm run rebuild && npm exec electron-forge package",
     "make": "npm run rebuild && npm exec electron-forge make",
     "rebuild": "electron-rebuild -f -w better-sqlite3",
-    "publish": "electron-forge publish",
+    "rebuild:node": "npm rebuild better-sqlite3",
+    "publish": "npm run rebuild && npm exec electron-forge publish",
     "lint": "npm run eslint && npm run typecheck",
     "eslint": "eslint",
     "typecheck": "tsc --noEmit --project tsconfig.app.json && tsc --noEmit --project tsconfig.node.json",
-    "test": "vitest"
+    "test": "vitest",
+    "drizzle:studio": "npm run rebuild:node && drizzle-kit studio --config=drizzle.config.ts"
   },
   "devDependencies": {
     "@electron-forge/cli": "^7.6.0",
