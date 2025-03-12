@@ -16,7 +16,9 @@
     "eslint": "eslint",
     "typecheck": "tsc --noEmit --project tsconfig.app.json && tsc --noEmit --project tsconfig.node.json",
     "test": "vitest",
-    "drizzle:studio": "npm run rebuild:node && drizzle-kit studio --config=drizzle.config.ts"
+    "drizzle:studio": "npm run rebuild:node && drizzle-kit studio --config=drizzle.config.ts",
+    "drizzle:generate": "npm run rebuild:node && drizzle-kit generate --config=drizzle.config.ts",
+    "drizzle:migrate": "mkdir -p database && npm run rebuild:node && drizzle-kit migrate --config=drizzle.config.ts"
   },
   "devDependencies": {
     "@electron-forge/cli": "^7.6.0",

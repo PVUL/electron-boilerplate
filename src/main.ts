@@ -62,9 +62,9 @@ function createWindow(): void {
   }
 
   // Open the DevTools when in development mode.
-  if (process.env.NODE_ENV === "development") {
-    mainWindow.webContents.openDevTools();
-  }
+  // if (process.env.NODE_ENV === "development") {
+  //   mainWindow.webContents.openDevTools();
+  // }
 }
 
 function migrateDatabase(): void {

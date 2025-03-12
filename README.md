@@ -1,5 +1,35 @@
 # Electron Boilerplate
 
+---
+
+## Drizzle
+
+See db in studio in dev:
+
+```sh
+npm run drizzle:studio
+```
+
+Generate migration files (based on `schema.ts`):
+
+```sh
+npm run drizzle:generate
+```
+
+Migrate the database:
+
+```sh
+npm run drizzle:migrate
+```
+
+If you need to delete the database, run:
+
+```sh
+rm -rf database # danger
+```
+
+---
+
 This is a boilerplate for creating desktop applications with [Electron](https://electronjs.org/).
 
 Uses:
